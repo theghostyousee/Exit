@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'VT323', monospace;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EDEBEC;
+  /* background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/af2fb22119822.582df3e034288.png); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+}
+
+.Door {
+  position: relative;
+
+  width: 200px;
+  height: 300px;
+  background-color: #3D3C3E;
+  border: solid 1px #C7C6C7;
+  border-radius: 10px;
+  transform-origin: top left;
+  transition: width 1s, transform 1s, background-color 1s;
+  image-rendering: pixelated; 
+  cursor: grabbing;
+
+}
+
+.Door::after {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  margin-top: -5px;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  
+}
+
+.inside {
+  position: absolute;
+  top: 30;
+  left: 30;
+  width: 200px;
+  height: 300px;
+  background-color: #C7C6C7;
+  border: none;
+  border-radius: 10px;
+}
+
+.Door:hover {
+  transform: skewX(-10deg);
+  transform: skewY(10deg);
+  width: 190px;
+  transform-origin: top left;
+  background-color: #3D3C3E;
+}
+
+@media screen and (max-width: 450px) {
+    
+}
